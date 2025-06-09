@@ -731,7 +731,9 @@ class DataGeneratorAM2K(Dataset):
             # self.trimap = data.trimap
 
         train_trans = [
+            RandomScale((0.5, 2.0)),
             RandomCrop((self.crop_size, self.crop_size)),
+            RandomHorizontalFlip(),
             # RandomCropAlpha((self.crop_size, self.crop_size)),
             ToTensor(phase="train")]
 
