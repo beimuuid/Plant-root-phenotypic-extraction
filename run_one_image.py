@@ -103,10 +103,10 @@ if __name__ == '__main__':
     #add argument we need:
     parser = default_argument_parser()
     parser.add_argument('--model', type=str, default='vitmatte-s')
-    parser.add_argument('--checkpoint-dir', type=str, default='path/to/checkpoint')
-    parser.add_argument('--image-dir', type=str, default='demo/retriever_rgb.png')
-    parser.add_argument('--trimap-dir', type=str, default='demo/retriever_trimap.png')
-    parser.add_argument('--output-dir', type=str, default='demo/result.png')
+    parser.add_argument('--checkpoint-dir', type=str, default='/home/yzli/mycode/alpha-free-matting-main/output_of_train/vitmatte_s_am2k_100ep_data-aug/model_final.pth')
+    parser.add_argument('--image-dir', type=str, default='/home/yzli/mycode/alpha-free-matting-main/demo/bulb_rgb.png')
+    parser.add_argument('--trimap-dir', type=str, default='/home/yzli/mycode/alpha-free-matting-main/demo/bulb_trimap.png')
+    parser.add_argument('--output-dir', type=str, default='/home/yzli/mycode/alpha-free-matting-main/demo/bulb_result.png')
     parser.add_argument('--device', type=str, default='cuda')
 
     args = parser.parse_args()

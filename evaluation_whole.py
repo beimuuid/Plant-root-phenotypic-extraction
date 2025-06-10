@@ -142,7 +142,7 @@ def evaluate(args):
         conn_loss_unknown.append(conn_loss_unknown_)  # l1 loss on unknown area
         grad_loss_unknown.append(grad_loss_unknown_)  # l1 loss on unknown area
 
-    print('* Unknown Region: MSE:', np.array(mse_loss_unknown).mean(), ' SAD:', np.array(sad_loss_unknown).mean(),
+    print('* Whole Region: MSE:', np.array(mse_loss_unknown).mean(), ' SAD:', np.array(sad_loss_unknown).mean(),
           'Conn:', np.array(conn_loss_unknown).mean(), 'Grad:', np.array(grad_loss_unknown).mean())
 
 
