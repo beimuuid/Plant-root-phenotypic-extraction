@@ -8,8 +8,8 @@ from data import ImageFileTrainAM2K, DataGeneratorAM2K
 # Dataloader
 train_dataset = DataGeneratorAM2K(
     data=ImageFileTrainAM2K(
-        trimap_dir="/home/yzli/mycode/alpha-free-matting-main/data/AM-2k/train/trimap/",
-        image_dir="/home/yzli/mycode/alpha-free-matting-main/data/AM-2k/train/original/",
+        trimap_dir="/home/bingxing2/ailab/zhangshufei/Plant-root-phenotypic-extraction/data/AM-2k/train/trimap",
+        image_dir="/home/bingxing2/ailab/zhangshufei/Plant-root-phenotypic-extraction/data/AM-2k/train/original",
         # alpha_ext='.png',
         trimap_ext='.png',
         image_ext='.jpg',

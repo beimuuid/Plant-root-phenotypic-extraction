@@ -19,8 +19,8 @@ def preprocess(model, name='dino', embed_dim=384):
 
 if __name__ == "__main__":
 
-    wget.download('https://dl.fbaipublicfiles.com/dino/dino_deitsmall16_pretrain/dino_deitsmall16_pretrain.pth')
-    wget.download('https://dl.fbaipublicfiles.com/mae/pretrain/mae_pretrain_vit_base.pth')
+    #wget.download('https://dl.fbaipublicfiles.com/dino/dino_deitsmall16_pretrain/dino_deitsmall16_pretrain.pth')
+    #wget.download('https://dl.fbaipublicfiles.com/mae/pretrain/mae_pretrain_vit_base.pth')
 
     dino_model = torch.load('pretrained/dino_deitsmall16_pretrain.pth')
     mae_model = torch.load('pretrained/mae_pretrain_vit_base.pth')['model']

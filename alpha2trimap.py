@@ -49,8 +49,8 @@ def alpha2trimap(pha):
     h, w = alpha_ori.shape
     alpha = cv2.resize(alpha_ori, (640, 640), interpolation=maybe_random_interp(cv2.INTER_NEAREST))
 
-    fg_width = np.random.randint(2, 5)
-    bg_width = np.random.randint(2, 5)
+    fg_width = np.random.randint(1, 30)
+    bg_width = np.random.randint(1, 30)
     # fg_width = np.random.randint(5, 15)
     # bg_width = np.random.randint(5, 15)
     # fg_mask = (alpha + 1e-5).astype(np.int).astype(np.uint8)

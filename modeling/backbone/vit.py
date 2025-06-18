@@ -395,7 +395,6 @@ class ViT(Backbone):
             x = x + get_abs_pos(
                 self.pos_embed, self.pretrain_use_cls_token, (x.shape[1], x.shape[2])
             )
-
         for blk in self.blocks:
             x = blk(x)
 
