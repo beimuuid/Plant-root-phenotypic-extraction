@@ -47,7 +47,7 @@ def init_model(model, checkpoint, device):
     """
     assert model in ['vitmatte-s', 'vitmatte-b']
     if model == 'vitmatte-s':
-        config = 'configs/common/model.py'
+        config = 'configs_plant/common/model.py'
         cfg = LazyConfig.load(config)
         model = instantiate(cfg.model)
         model.to('cuda')
@@ -91,12 +91,12 @@ def get_data(image_dir, trimap_dir):
     """
     image = Image.open(image_dir).convert('RGB')
     image = F.to_tensor(image).unsqueeze(0)
-    # trimap = Image.open(trimap_dir).convert('L')
-    # trimap = F.to_tensor(trimap).unsqueeze(0)
+    trimap = Image.open(trimap_dir).convert('L')
+    trimap = F.to_tensor(trimap).unsqueeze(0) * 255
 
     return {
         'image': image,
-        # 'trimap': trimap
+        'trimap': trimap
     }
 
 if __name__ == '__main__':
